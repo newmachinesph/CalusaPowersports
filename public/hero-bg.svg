@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#02192F"/>
+      <stop offset="0.45" stop-color="#0A2747"/>
+      <stop offset="0.72" stop-color="#10716F"/>
+      <stop offset="1" stop-color="#F0723B"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F9AA3B" stop-opacity="0.55"/>
+      <stop offset="0.25" stop-color="#10716F" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#02192F"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#F9AA3B"/>
+      <stop offset="0.7" stop-color="#F9AA3B" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#F9AA3B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A1D33"/>
+      <stop offset="1" stop-color="#02101E"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="740" fill="url(#sky)"/>
+  <circle cx="1380" cy="700" r="340" fill="url(#sun)"/>
+  <circle cx="1380" cy="700" r="120" fill="#F9AA3B" opacity="0.9"/>
+
+  <rect y="720" width="1920" height="360" fill="url(#water)"/>
+  <g opacity="0.35" stroke="#F9AA3B" stroke-width="3">
+    <line x1="1180" y1="765" x2="1600" y2="765"/>
+    <line x1="1240" y1="800" x2="1540" y2="800"/>
+    <line x1="1150" y1="845" x2="1620" y2="845"/>
+  </g>
+  <g opacity="0.25" stroke="#BAF3F5" stroke-width="2">
+    <line x1="200" y1="790" x2="760" y2="790"/>
+    <line x1="80" y1="860" x2="620" y2="860"/>
+    <line x1="300" y1="930" x2="900" y2="930"/>
+  </g>
+
+  <path d="M0 1080 L720 720 H860 L520 1080 Z" fill="url(#road)"/>
+  <path d="M690 1080 L790 725 H800 L740 1080 Z" fill="#F9AA3B" opacity="0.5"/>
+
+  <g fill="#02192F">
+    <path d="M1600 740 q10 -40 22 0 q8 -28 16 0 Z" opacity="0.9"/>
+    <path d="M240 742 q12 -52 26 0 q10 -34 20 0 Z" opacity="0.9"/>
+    <rect x="252" y="700" width="4" height="42"/>
+    <rect x="1610" y="708" width="3" height="34"/>
+  </g>
+</svg>
