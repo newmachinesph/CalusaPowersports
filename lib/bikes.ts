@@ -1,4 +1,4 @@
-export type Bike = {
+﻿export type Bike = {
   slug: string;
   name: string;
   category: string;
@@ -19,7 +19,7 @@ export const BIKES: Bike[] = [
     engine: "Milwaukee-Eight 117",
     blurb:
       "The classic American tourer. Batwing fairing, booming audio, and all-day comfort for coastal cruises down to Marco Island.",
-    image: "/bikes/street-glide.svg",
+    image: "/bikes/street-glide.jpg",
   },
   {
     slug: "rebel-500",
@@ -30,7 +30,7 @@ export const BIKES: Bike[] = [
     engine: "471cc parallel twin",
     blurb:
       "Light, low, and easygoing. The perfect first rental for exploring downtown Fort Myers and the beach causeways.",
-    image: "/bikes/rebel-500.svg",
+    image: "/bikes/rebel-500.jpg",
   },
   {
     slug: "ninja-650",
@@ -41,7 +41,7 @@ export const BIKES: Bike[] = [
     engine: "649cc parallel twin",
     blurb:
       "Sharp looks, friendly power. Carve the curves out toward Alva and the Caloosahatchee backroads.",
-    image: "/bikes/ninja-650.svg",
+    image: "/bikes/ninja-650.jpg",
   },
   {
     slug: "r1250gs",
@@ -52,7 +52,7 @@ export const BIKES: Bike[] = [
     engine: "1254cc boxer twin",
     blurb:
       "The go-anywhere legend. Loaded with luggage for multi-day runs to the Everglades and the Keys.",
-    image: "/bikes/r1250gs.svg",
+    image: "/bikes/r1250gs.jpg",
   },
   {
     slug: "vespa-gts",
@@ -63,7 +63,7 @@ export const BIKES: Bike[] = [
     engine: "278cc single",
     blurb:
       "Island-hopping made stylish. Ideal for Sanibel, Captiva, and Fort Myers Beach parking that bikes only dream of.",
-    image: "/bikes/vespa-gts.svg",
+    image: "/bikes/vespa-gts.jpg",
   },
   {
     slug: "ryker-900",
@@ -74,6 +74,6 @@ export const BIKES: Bike[] = [
     engine: "900cc Rotax triple",
     blurb:
       "Three wheels, zero balance required. No motorcycle endorsement needed in Florida — twist and go.",
-    image: "/bikes/ryker-900.svg",
+    image: "/bikes/ryker-900.jpg",
   },
 ];
