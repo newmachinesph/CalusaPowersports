@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Calusa Powersports
 
-## Getting Started
+A marketing and booking-request site for a motorcycle rental shop in Fort Myers, Florida. It lists the rental fleet, daily rates, rental requirements, and a booking form, with a dark navy and amber visual design. The repository also holds a small browser tool for making social media graphics.
 
-First, run the development server:
+Stack: Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS 4, Framer Motion.
+
+## What is in it
+
+| Path | Contents |
+|------|----------|
+| `app/` | Pages: home, `/fleet`, `/pricing`, `/about`, `/contact`; root layout and global styles |
+| `components/` | `BikeCard`, `BookingForm`, `Marquee`, `SiteHeader`, `SiteFooter`, and `motion/` (reveal and hero animation helpers) |
+| `lib/bikes.ts` | The fleet data (name, category, daily rate, engine, copy) that feeds the fleet, pricing and booking pages |
+| `public/` | Logos and bike images |
+| `marketing/` | Logo and promo art, plus `social-studio.html` (see below) |
+| `design.md` | The design system: tokens, type, motion and CTA rules |
+
+## How it works
+
+- Fleet and pricing pages render from the `BIKES` array in `lib/bikes.ts`. Edit that file to change bikes or rates.
+- The booking form (`components/BookingForm.tsx`) has no backend. On submit it opens the visitor's mail client with a pre-filled `mailto:` message.
+- Motion uses Framer Motion, wrapped in `MotionConfig` with `reducedMotion="user"`.
+- The phone number shown on the site is a placeholder (a 555 number).
+
+## Social Studio
+
+`marketing/social-studio.html` is a standalone file. Open it in a browser, pick a template, edit the text, and download a PNG. It needs no server. See `marketing/README.md`.
+
+## Local development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Checks
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run lint     # ESLint (eslint-config-next)
+npm run build    # production build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+There is no test suite.
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+A standard Next.js app with no required environment variables. Deploy with `npm run build && npm start`, or on any Next.js host such as Vercel.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT. See [LICENSE](LICENSE).
